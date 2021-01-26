@@ -64,9 +64,13 @@ namespace Z5UI
         private void ShowSummary_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var episode = EpisodesList.SelectedItem as Episode;
-            string summary = episode.summary.Replace("<p>", "");
-            summary = summary.Replace("</p>", "");
-            if (summary.Length == 0)
+            string summary = episode.summary;
+            if (episode.summary != null)
+            {
+                summary = summary.Replace("<p>", "");
+                summary = summary.Replace("</p>", "");
+            }
+            if (summary == null)
                 summary = "No summary found for this episode.";
             MessageBoxResult result = MessageBox.Show(summary, "Episode info");
         }
