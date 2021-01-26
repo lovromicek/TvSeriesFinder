@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Z5", "Z5\Z5.csproj", "{08A745EB-33D4-47BA-9465-B18B1F49B5A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z5UI", "Z5UI\Z5UI.csproj", "{F07EBD47-BBA6-4E5B-B210-93DB49137F5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08A745EB-33D4-47BA-9465-B18B1F49B5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A745EB-33D4-47BA-9465-B18B1F49B5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A745EB-33D4-47BA-9465-B18B1F49B5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A745EB-33D4-47BA-9465-B18B1F49B5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F07EBD47-BBA6-4E5B-B210-93DB49137F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07EBD47-BBA6-4E5B-B210-93DB49137F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07EBD47-BBA6-4E5B-B210-93DB49137F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07EBD47-BBA6-4E5B-B210-93DB49137F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9246E565-A39D-4B52-8E36-2E4BE97593B9}
+	EndGlobalSection
+EndGlobal
