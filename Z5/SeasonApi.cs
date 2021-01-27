@@ -9,7 +9,7 @@ namespace Z5
 {
     public class SeasonApi
     {
-        public static List<Season> start_get(int id)
+        public static List<Season> GetSeasonListFromApi(int id)
         {
             HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(string.Format($"http://api.tvmaze.com/shows/{id}/seasons"));
 

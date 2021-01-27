@@ -9,7 +9,7 @@ namespace Z5
 {
     public class WebApi
     {
-        public static List<TvSeriesTitles> start_get(string name)
+        public static List<TvSeriesTitles> GetShowListFromApi(string name)
         {
             HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(string.Format($"http://api.tvmaze.com/search/shows?q={name}"));
 

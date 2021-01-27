@@ -28,14 +28,14 @@ namespace Z5UI
         private void SearchSeries_Click(object sender, RoutedEventArgs e)
         {
             string name = TitleInput.Text;
-            var series = WebApi.start_get(name);
+            var series = WebApi.GetShowListFromApi(name);
             ShowsList.ItemsSource = series;
             ShowsList.Items.Refresh();        
         }
         private void ShowsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var shows = ShowsList.SelectedItem as TvSeriesTitles;
-            SeasonsList.ItemsSource = SeasonApi.start_get(shows.show.id);
+            SeasonsList.ItemsSource = SeasonApi.GetSeasonListFromApi(shows.show.id);
             SeasonsList.Items.Refresh();
             TBlockName.Text = $"Selected show: {shows.show.name}";
             TBlockLang.Text = $"Language: {shows.show.language}";
@@ -49,7 +49,7 @@ namespace Z5UI
         private void EpisodesList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var season = SeasonsList.SelectedItem as Season;
-            var episodes = EpisodeApi.start_get(season.id);
+            var episodes = EpisodeApi.GetEpisodeListFromApi(season.id);
             EpisodesList.Items.Refresh();
             foreach (var episode in episodes.ToList())
             {
