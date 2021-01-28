@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Z5UI"
+        Icon="/Z5UI;component/icon.png"
         mc:Ignorable="d"
         Title="Tv Series Finder" Height="670" Width="1280" FontSize="20">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Z5UI;component/bg.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="0.33*"/>

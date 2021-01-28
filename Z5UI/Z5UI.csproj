@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="bg.jpg" />
+    <None Remove="icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Z5\Z5.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bg.jpg" />
+    <Resource Include="icon.png" />
   </ItemGroup>
 
 </Project>
