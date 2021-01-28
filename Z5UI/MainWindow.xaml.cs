@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,10 +70,37 @@ namespace Z5UI
             {
                 summary = summary.Replace("<p>", "");
                 summary = summary.Replace("</p>", "");
+                summary = summary.Replace("<b>", "");
+                summary = summary.Replace("</b>", "");
+                summary = summary.Replace("<i>", "");
             }
             if (summary == null)
                 summary = "No summary found for this episode.";
             MessageBoxResult result = MessageBox.Show(summary, "Episode info");
+        }
+        private void SortAscending_Click(object sender, RoutedEventArgs e)
+        {
+            var list = EpisodesList.Items.Cast<Episode>().OrderBy(a => a.name).ToList();
+            EpisodesList.ItemsSource = list;
+            EpisodesList.Items.Refresh();
+        }
+        private void SortDescending_Click(object sender, RoutedEventArgs e)
+        {
+            var list = EpisodesList.Items.Cast<Episode>().OrderByDescending(a => a.name).ToList();
+            EpisodesList.ItemsSource = list;
+            EpisodesList.Items.Refresh();
+        }
+        private void SortByEpisodeNumberAscending_Click(object sender, RoutedEventArgs e)
+        {
+            var list = EpisodesList.Items.Cast<Episode>().OrderBy(a => a.number).ToList();
+            EpisodesList.ItemsSource = list;
+            EpisodesList.Items.Refresh();
+        }
+        private void SortByEpisodeNumberDescending_Click(object sender, RoutedEventArgs e)
+        {
+            var list = EpisodesList.Items.Cast<Episode>().OrderByDescending(a => a.number).ToList();
+            EpisodesList.ItemsSource = list;
+            EpisodesList.Items.Refresh();
         }
     }
 }

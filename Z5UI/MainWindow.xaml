@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Z5UI"
         mc:Ignorable="d"
-        Title="Tv Series Finder" Height="650" Width="1280" FontSize="20">
+        Title="Tv Series Finder" Height="670" Width="1280" FontSize="20">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
@@ -38,6 +38,8 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <TextBlock Name="TitleLabel"
                    Grid.Column="1" Grid.Row="1"
@@ -81,5 +83,21 @@
                    Grid.Column="1" Grid.Row="19"
                    Text="{Binding Path=Ocjena, UpdateSourceTrigger=PropertyChanged}"
                    FontSize="14"/>
+        <Button Name="SortAscending"
+                Grid.Column="4" Grid.Row="21"
+                Content="A-->Z" Margin="30,0,294,0"
+                Click="SortAscending_Click" Grid.ColumnSpan="2"/>
+        <Button Name="SortDescending"
+                Grid.Column="5" Grid.Row="21"
+                Content="Z-->A" Margin="98,0,196,0"
+                Click="SortDescending_Click"/>
+        <Button Name="SortAscendingNumber"
+                Grid.Column="5" Grid.Row="21"
+                Content="Num ↗" Margin="196,0,98,0"
+                Click="SortByEpisodeNumberAscending_Click"/>
+        <Button Name="SortDescendingNumber"
+                Grid.Column="5" Grid.Row="21"
+                Content="Num ↘" Margin="294,0,0,0"
+                Click="SortByEpisodeNumberDescending_Click"/>
     </Grid>
 </Window>
